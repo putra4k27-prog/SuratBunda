@@ -1,0 +1,1924 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f5">
+
+<title>Untuk Bunda Tersayang ❤️</title>
+
+<style>
+/* =================================
+   1. PENGATURAN DASAR
+================================= */
+
+:root {
+    --pink: #ff7da8;
+    --pink-light: #fff0f5;
+    --rose: #d94f83;
+    --cream: #fffaf4;
+    --text: #60424e;
+    --card: rgba(255, 255, 255, 0.88);
+    --shadow: 0 12px 35px rgba(180, 76, 115, 0.13);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: linear-gradient(135deg, #fff5f7, #fffaf0, #ffe9f0);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background 0.4s, color 0.4s;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #d94f83;
+    outline-offset: 3px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: auto;
+}
+
+section {
+    padding: 65px 0;
+    scroll-margin-top: 75px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: clamp(1.8rem, 5vw, 2.7rem);
+    color: var(--rose);
+    margin-bottom: 14px;
+}
+
+.section-subtitle {
+    text-align: center;
+    margin: 0 auto 35px;
+    line-height: 1.8;
+    max-width: 650px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid rgba(255, 125, 168, 0.2);
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
+}
+
+.primary-btn,
+.secondary-btn {
+    border: none;
+    border-radius: 30px;
+    padding: 13px 23px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.primary-btn {
+    color: white;
+    background: linear-gradient(135deg, #ff7da8, #d94f83);
+    box-shadow: 0 7px 18px rgba(217, 79, 131, 0.25);
+}
+
+.secondary-btn {
+    color: var(--rose);
+    background: #ffe5ee;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(217, 79, 131, 0.2);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #f2bdcf;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #60424e;
+    margin: 12px 0;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* =================================
+   2. HALAMAN KATA SANDI
+================================= */
+
+#loginPage {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    position: relative;
+}
+
+.login-card {
+    width: min(440px, 100%);
+    text-align: center;
+    padding: 40px 30px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid white;
+    box-shadow: 0 20px 60px rgba(217, 79, 131, 0.17);
+    animation: appear 0.8s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.login-icon {
+    font-size: 65px;
+    margin-bottom: 12px;
+    animation: heartbeat 1.8s infinite;
+}
+
+.login-card h1 {
+    color: var(--rose);
+    font-size: clamp(1.7rem, 6vw, 2.3rem);
+    margin-bottom: 15px;
+}
+
+.login-card p {
+    line-height: 1.8;
+}
+
+.login-card input {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.login-note {
+    font-size: 0.82rem;
+    opacity: 0.8;
+    margin-top: 16px;
+}
+
+.error-message {
+    color: #c62855;
+    margin-top: 10px;
+    min-height: 24px;
+}
+
+/* =================================
+   3. HEADER DAN NAVIGASI
+================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(255, 250, 252, 0.92);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #ffe0e9;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    color: var(--rose);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.92rem;
+}
+
+.nav-links a:hover {
+    color: var(--rose);
+}
+
+#themeButton {
+    border: none;
+    background: #ffe5ee;
+    padding: 10px 13px;
+    border-radius: 50%;
+}
+
+/* =================================
+   4. HALAMAN UTAMA
+================================= */
+
+.hero {
+    min-height: 80vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 60px 15px;
+}
+
+.hero-content {
+    max-width: 780px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 9px 16px;
+    background: white;
+    color: var(--rose);
+    border-radius: 30px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow);
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1.15;
+    color: var(--rose);
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #a95778;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    max-width: 620px;
+    margin: 0 auto 25px;
+}
+
+.hero-heart {
+    font-size: 100px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 10px 20px #ffc1d5);
+    animation: heartbeat 1.7s infinite;
+}
+
+.hero-decoration {
+    position: absolute;
+    font-size: 35px;
+    opacity: 0.65;
+    animation: float 4s ease-in-out infinite;
+}
+
+.decoration-one {
+    top: 15%;
+    left: 8%;
+}
+
+.decoration-two {
+    top: 24%;
+    right: 9%;
+    animation-delay: 1s;
+}
+
+.decoration-three {
+    bottom: 15%;
+    left: 14%;
+    animation-delay: 2s;
+}
+
+/* =================================
+   5. SURAT UNTUK BUNDA
+================================= */
+
+.letter-card {
+    max-width: 800px;
+    margin: auto;
+    background: #fffdf8;
+    padding: clamp(22px, 5vw, 50px);
+    border-radius: 8px 8px 25px 25px;
+    box-shadow: 0 15px 40px rgba(115, 73, 66, 0.13);
+    border-top: 7px solid #e99ab5;
+    position: relative;
+    line-height: 2;
+}
+
+.letter-card::before {
+    content: "🌷";
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 35px;
+    opacity: 0.7;
+}
+
+.letter-heading {
+    text-align: center;
+    color: #b84d78;
+    font-size: 1.8rem;
+    margin: 15px 0 25px;
+}
+
+.letter-card p {
+    margin-bottom: 18px;
+    white-space: pre-line;
+}
+
+.signature {
+    margin-top: 30px;
+    text-align: right;
+    font-style: italic;
+    color: #b84d78;
+}
+
+.letter-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+/* =================================
+   6. KARTU FITUR
+================================= */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+}
+
+.feature-icon {
+    font-size: 45px;
+    margin-bottom: 14px;
+}
+
+.feature-card h3 {
+    color: var(--rose);
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    line-height: 1.7;
+}
+
+/* =================================
+   7. GALERI FOTO
+================================= */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.gallery-item {
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+.gallery-caption {
+    padding: 15px;
+    text-align: center;
+}
+
+/* =================================
+   8. TOPLES PESAN
+================================= */
+
+.jar-area {
+    text-align: center;
+}
+
+.jar {
+    font-size: 100px;
+    margin: 15px;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.3s;
+    background: none;
+    border: none;
+}
+
+.jar:hover {
+    transform: rotate(-10deg) scale(1.1);
+}
+
+.message-box {
+    max-width: 600px;
+    margin: 15px auto;
+    min-height: 100px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* =================================
+   9. MISI KEBAIKAN
+================================= */
+
+.mission-list {
+    max-width: 700px;
+    margin: auto;
+}
+
+.mission-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 17px 0;
+    border-bottom: 1px solid #ffe1ea;
+    line-height: 1.6;
+}
+
+.mission-item input {
+    width: 21px;
+    height: 21px;
+    margin: 2px 0 0;
+    flex-shrink: 0;
+    accent-color: #d94f83;
+}
+
+.progress-track {
+    height: 12px;
+    background: #ffe1ea;
+    border-radius: 20px;
+    margin: 20px 0 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #ff7da8, #c94d83);
+    transition: width 0.4s;
+}
+
+.progress-text {
+    text-align: center;
+    color: var(--rose);
+}
+
+/* =================================
+   10. PESAN PRIBADI
+================================= */
+
+.message-form {
+    max-width: 700px;
+    margin: auto;
+}
+
+.output-message {
+    margin-top: 20px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* =================================
+   11. KEJUTAN
+================================= */
+
+.surprise-box {
+    text-align: center;
+}
+
+.gift-button {
+    font-size: 90px;
+    background: none;
+    border: none;
+    transition: transform 0.3s;
+}
+
+.gift-button:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.surprise-result {
+    margin: 20px auto 0;
+    max-width: 650px;
+    line-height: 1.8;
+}
+
+/* =================================
+   12. PEMUTAR MUSIK
+================================= */
+
+.music-card {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.music-card p {
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.music-status {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+/* =================================
+   13. DINDING TERIMA KASIH
+================================= */
+
+.gratitude-wall {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gratitude-note {
+    background: #fff4cc;
+    border-radius: 6px 20px 20px 20px;
+    padding: 20px;
+    min-height: 130px;
+    line-height: 1.8;
+    box-shadow: 0 6px 18px rgba(100, 70, 40, 0.08);
+    transform: rotate(-1deg);
+}
+
+.gratitude-note:nth-child(even) {
+    background: #ffe5ee;
+    transform: rotate(1deg);
+}
+
+/* =================================
+   14. FOOTER DAN NOTIFIKASI
+================================= */
+
+footer {
+    padding: 35px 15px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.6);
+    line-height: 1.9;
+}
+
+#toast {
+    position: fixed;
+    bottom: 22px;
+    left: 50%;
+    transform: translate(-50%, 30px);
+    background: #8e365a;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 30px;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    text-align: center;
+    width: max-content;
+    max-width: 90%;
+}
+
+#toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.floating {
+    position: fixed;
+    top: -30px;
+    pointer-events: none;
+    z-index: 50;
+    animation: fall linear forwards;
+}
+
+.celebration {
+    position: fixed;
+    z-index: 60;
+    pointer-events: none;
+    animation: burst 1.5s ease-out forwards;
+}
+
+/* =================================
+   15. MODE MALAM
+================================= */
+
+body.dark {
+    --text: #f9e3eb;
+    --card: rgba(55, 38, 57, 0.92);
+    --shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+
+    background: linear-gradient(135deg, #20172a, #352038, #211b32);
+    color: var(--text);
+}
+
+body.dark header,
+body.dark footer {
+    background: rgba(38, 27, 43, 0.95);
+}
+
+body.dark .nav-links a {
+    color: #f9e3eb;
+}
+
+body.dark .login-card {
+    background: #38283d;
+    color: #f9e3eb;
+    border-color: #61405c;
+}
+
+body.dark .hero h1,
+body.dark .section-title,
+body.dark .feature-card h3 {
+    color: #ffb6d0;
+}
+
+body.dark .hero h1 span {
+    color: #e9b8d0;
+}
+
+body.dark .hero-badge,
+body.dark .secondary-btn {
+    background: #52374f;
+    color: #ffd6e6;
+}
+
+body.dark .letter-card {
+    background: #fff8ee;
+    color: #60424e;
+}
+
+body.dark .letter-card .letter-heading,
+body.dark .letter-card .signature {
+    color: #b84d78;
+}
+
+body.dark input,
+body.dark textarea {
+    background: #302438;
+    color: white;
+    border-color: #76516f;
+}
+
+body.dark .gratitude-note {
+    background: #55404b;
+    color: white;
+}
+
+body.dark .gratitude-note:nth-child(even) {
+    background: #49394f;
+}
+
+body.dark .mission-item {
+    border-color: #594258;
+}
+
+/* =================================
+   16. ANIMASI
+================================= */
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.08); }
+    45% { transform: scale(1); }
+    65% { transform: scale(1.05); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-18px) rotate(8deg); }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes burst {
+    0% {
+        transform: translate(0, 0) scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--x), var(--y)) scale(1.4) rotate(40deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        padding: 13px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links {
+        gap: 12px;
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 45px 0;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #letterSection,
+    #letterSection * {
+        visibility: visible;
+    }
+
+    #letterSection {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    #letterSection .letter-actions,
+    #letterSection .section-title,
+    #letterSection .section-subtitle {
+        display: none !important;
+    }
+
+    .letter-card {
+        box-shadow: none;
+        border: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =================================
+     HALAMAN LOGIN
+================================= -->
+
+<div id="loginPage">
+    <div class="login-card">
+
+        <div class="login-icon">💌</div>
+
+        <h1>Surat untuk bunda</h1>
+
+        <p>
+            Ada sebuah surat penuh cinta yang menunggu
+            untuk dibaca.
+        </p>
+
+        <p style="margin-top: 10px;">
+            Siapakah nama anak tersayang bunda?
+        </p>
+
+        <form id="loginForm">
+            <input
+                type="text"
+                id="passwordInput"
+                placeholder="Masukkan nama anak..."
+                autocomplete="off"
+                required
+            >
+
+            <button class="primary-btn" type="submit">
+                Buka Surat ❤️
+            </button>
+        </form>
+
+        <p id="loginError" class="error-message"
+           aria-live="polite"></p>
+
+        <p class="login-note">
+            Dibuat dengan penuh cinta untuk bunda tersayang 🌷
+        </p>
+
+    </div>
+</div>
+
+
+<!-- =================================
+     KONTEN WEBSITE
+================================= -->
+
+<div id="mainWebsite" class="hidden">
+
+<header>
+    <div class="container navbar">
+
+        <div class="logo">🌷 Untuk bunda</div>
+
+        <nav class="nav-links" aria-label="Navigasi utama">
+            <a href="#home">Beranda</a>
+            <a href="#letterSection">Surat</a
+            <a href="#missions">Misi</a>
+            <a href="#messageForm">Pesan</a>
+        </nav>
+
+        <button id="themeButton" aria-label="Ganti mode tampilan">
+            🌙
+        </button>
+
+    </div>
+</header>
+
+
+<!-- BERANDA -->
+
+<section class="hero" id="home">
+
+    <div class="hero-decoration decoration-one">🌸</div>
+    <div class="hero-decoration decoration-two">💗</div>
+    <div class="hero-decoration decoration-three">🌷</div>
+
+    <div class="hero-content">
+
+        <div class="hero-heart">❤️</div>
+
+        <div class="hero-badge">
+            Sebuah hadiah kecil untuk orang paling istimewa
+        </div>
+
+        <h1>
+            Untuk bunda,
+            <span>Cintaku Sepanjang Masa</span>
+        </h1>
+
+        <p>
+            Tidak ada kata yang cukup untuk menggambarkan
+            betapa berharganya bunda. Website kecil ini adalah
+            cara sederhana untuk mengatakan bahwa Bunda selalu
+            punya tempat istimewa di hati.
+        </p>
+
+        <a href="#letterSection">
+            <button class="primary-btn">
+                Baca Surat Cinta 💌
+            </button>
+        </a>
+
+    </div>
+</section>
+
+
+<!-- SURAT -->
+
+<section id="letterSection">
+
+    <div class="container">
+
+        <h2 class="section-title">💌 Surat dari Hati</h2>
+
+        <p class="section-subtitle">
+            Untuk seseorang yang selalu memberikan cinta,
+            bahkan ketika dunia terasa tidak mudah.
+        </p>
+
+        <article class="letter-card" id="letterPaper">
+
+            <h3 class="letter-heading">
+                Untuk bunda Tersayang 🌷
+            </h3>
+
+            <p>Assalamu'alaikum, Bunda tersayang.</p>
+
+            <p>
+                bunda, terima kasih karena sudah hadir dalam
+                hidupku. Terima kasih untuk setiap perhatian,
+                doa, kesabaran, dan kasih sayang yang bunda
+                berikan selama ini.
+            </p>
+
+            <p>
+                Mungkin aku belum selalu bisa menjadi anak
+                yang sempurna. Terkadang aku lupa mengucapkan
+                terima kasih, terkadang aku membuat bunda
+                khawatir, dan terkadang aku belum memahami
+                betapa besar perjuangan bunda.
+            </p>
+
+            <p>
+                Namun, satu hal yang ingin selalu bunda tahu:
+                aku sangat menyayangi bunda.
+            </p>
+
+            <p>
+                Terima kasih sudah menjadi tempatku belajar,
+                tempatku bercerita, dan salah satu alasan
+                aku terus berusaha menjadi pribadi yang lebih
+                baik.
+            </p>
+
+            <p>
+                Aku berharap bunda selalu diberi kesehatan,
+                ketenangan, kebahagiaan, dan banyak alasan
+                untuk tersenyum. Semoga suatu hari nanti aku
+                bisa membalas sebagian kecil dari semua
+                kebaikan yang telah bunda berikan.
+            </p>
+
+            <p>
+                Jika selama ini ada kata atau sikapku yang
+                membuat bunda sedih, maafkan aku, ya, Bun.
+                Aku masih belajar menjadi anak yang lebih
+                sabar, lebih perhatian, dan lebih bertanggung
+                jawab.
+            </p>
+
+            <p>
+                Aku mungkin tidak selalu pandai menunjukkan
+                rasa sayangku, tetapi kasih sayangku kepada
+                Bunda akan selalu punya tempat yang istimewa
+                di hatiku.
+            </p>
+
+            <p>
+                Terima kasih untuk semuanya, Bu.
+                Semoga aku bisa membuat Bunda bangga, bukan
+                hanya melalui kata-kata, tetapi juga melalui
+                perbuatan.
+            </p>
+
+            <div class="signature">
+                Dengan cinta yang tulus,<br>
+                <strong id="childSignature">Anakmu tersayang ❤️</strong>
+            </div>
+
+        </article>
+
+        <div class="letter-actions">
+
+            <button class="primary-btn" id="letterToggle">
+                💗 Sembunyikan Surat
+            </button>
+
+            <button class="secondary-btn" id="printButton">
+                🖨️ Cetak / Simpan PDF
+            </button>
+
+            <button class="secondary-btn" id="hugButton">
+                🤗 Peluk Abang Virtual
+            </button>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- AKTIVITAS CINTA -->
+
+<section id="activities">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            🌸 Taman Kasih Sayang
+        </h2>
+
+        <p class="section-subtitle">
+            Cinta tidak selalu harus diungkapkan dengan
+            kata-kata. Kadang, hal kecil justru menjadi
+            kenangan yang paling indah.
+        </p>
+
+        <div class="feature-grid">
+
+            <div class="card feature-card">
+                <div class="feature-icon">💗</div>
+                <h3>Kirim Cinta</h3>
+                <p>
+                    Kirimkan harapan baik dan doa untuk
+                    kebahagiaan Bunda.
+                </p>
+                <br>
+                <button class="secondary-btn" id="loveButton">
+                    Kirim ❤️
+                </button>
+            </div>
+
+            <div class="card feature-card">
+                <div class="feature-icon">🌷</div>
+                <h3>Pesan Hari Ini</h3>
+                <p>
+                    Temukan pengingat sederhana tentang
+                    betapa berharganya Bunda.
+                </p>
+                <br>
+                <button class="secondary-btn" id="dailyButton">
+                    Buka Pesan
+                </button>
+            </div>
+
+            <div class="card feature-card">
+                <div class="feature-icon">🎁</div>
+                <h3>Kejutan Manis</h3>
+                <p>
+                    Ada kejutan kecil yang bisa kamu buka
+                    kapan saja.
+                </p>
+                <br>
+                <button class="secondary-btn"
+                        onclick="openSurprise()">
+                    Buka Kejutan
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- GALERI -->
+
+
+
+
+<!-- TOPLES KASIH SAYANG -->
+
+<section id="loveJar">
+
+    <div class="container">
+
+        <h2 class="section-title">🫙 Toples Kasih Sayang</h2>
+
+        <p class="section-subtitle">
+            Klik toplesnya dan temukan pesan manis untuk bunda!
+        </p>
+
+        <div class="card jar-area">
+
+            <button class="jar" id="jarButton"
+                    aria-label="Buka toples pesan">
+                🫙
+            </button>
+
+            <p>Klik toples untuk mengambil satu pesan 💌</p>
+
+            <div class="message-box" id="jarMessage"
+                 aria-live="polite">
+                Pesan penuh cinta menunggumu di sini.
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- MISI KEBAIKAN -->
+
+<section id="missions">
+
+    <div class="container">
+
+        <h2 class="section-title">🌻 Misi Membahagiakan bunda</h2>
+
+        <p class="section-subtitle">
+            Kegiatan baik yang ingin abang lakukan untuk bunda.
+            Kebahagiaan sering dimulai dari perhatian sederhana.
+        </p>
+
+        <div class="card mission-list">
+
+            <label class="mission-item">
+                <input type="checkbox" class="missionCheck">
+                <span>💗 Mengucapkan terima kasih kepada Bunda.</span>
+            </label>
+
+            <label class="mission-item">
+                <input type="checkbox" class="missionCheck">
+                <span>🧹 Membantu pekerjaan rumah tanpa harus diminta.</span>
+            </label>
+
+            <label class="mission-item">
+                <input type="checkbox" class="missionCheck">
+                <span>🤗 Menyempatkan waktu untuk mengobrol bersama Bunda.</span>
+            </label>
+
+            <label class="mission-item">
+                <input type="checkbox" class="missionCheck">
+                <span>🌷 Mengucapkan kata-kata yang baik dan lembut.</span>
+            </label>
+
+            <label class="mission-item">
+                <input type="checkbox" class="missionCheck">
+                <span>🍵 Menawarkan bantuan saat Bunda sedang sibuk.</span>
+            </label>
+
+            <label class="mission-item">
+                <input type="checkbox" class="missionCheck">
+                <span>💌 Menulis pesan terima kasih untuk bunda.</span>
+            </label>
+
+            <label class="mission-item">
+                <input type="checkbox" class="missionCheck">
+                <span>😊 Meluangkan waktu untuk melakukan aktivitas bersama.</span>
+            </label>
+
+            <div class="progress-track">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
+            <p class="progress-text" id="progressText"
+               aria-live="polite">
+                0 dari 7 misi selesai 🌱
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- PESAN BUATAN SENDIRI -->
+
+<section id="messageForm">
+
+    <div class="container">
+
+        <h2 class="section-title">✍️ Pesan dari Hatiku</h2>
+
+        <p class="section-subtitle">
+            Tulis sesuatu yang ingin kamu sampaikan kepada Anakmu.
+        </p>
+
+        <div class="card message-form">
+
+            <label for="customMessage">
+                Pesan untuk Anakku:
+            </label>
+
+            <textarea
+                id="customMessage"
+                placeholder="Untuk abang dzakiyy..."
+            ></textarea>
+
+            <label for="customSender">
+                Nama pengirim:
+            </label>
+
+            <input
+                type="text"
+                id="customSender"
+                placeholder="Nama bunda..."
+            >
+
+            <button class="primary-btn" id="createMessage">
+                Buat Pesan 💌
+            </button>
+
+            <button class="secondary-btn" id="copyMessage">
+                Salin Pesan 📋
+            </button>
+
+            <div class="output-message" id="messageOutput"
+                 aria-live="polite"></div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- KEJUTAN -->
+
+<section id="surprise">
+
+    <div class="container">
+
+        <h2 class="section-title">🎁 Kotak Kejutan</h2>
+
+        <p class="section-subtitle">
+            Ada sesuatu yang ingin disampaikan oleh anak
+            tersayang untuk Bunda.
+        </p>
+
+        <div class="card surprise-box">
+
+            <button class="gift-button" id="giftButton"
+                    aria-label="Buka kotak kejutan">
+                🎁
+            </button>
+
+            <p>Klik kotak hadiah untuk membukanya!</p>
+
+            <div class="surprise-result"
+                 id="surpriseResult"
+                 aria-live="polite"></div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- PEMUTAR MUSIK -->
+
+
+
+
+<!-- DINDING TERIMA KASIH -->
+
+<section id="gratitude">
+
+    <div class="container">
+
+        <h2 class="section-title">💖 Dinding Rasa Syukur</h2>
+
+        <p class="section-subtitle">
+            Beberapa hal sederhana yang membuat Bunds
+            begitu berarti.
+        </p>
+
+        <div class="gratitude-wall">
+
+            <div class="gratitude-note">
+                🌷 Terima kasih, Bun, karena selalu berusaha
+                memberikan yang terbaik.
+            </div>
+
+            <div class="gratitude-note">
+                💗 Terima kasih karena telah mengajariku
+                untuk terus belajar.
+            </div>
+
+            <div class="gratitude-note">
+                ☀️ Terima kasih untuk perhatian kecil
+                yang sering tidak kusadari.
+            </div>
+
+            <div class="gratitude-note">
+                🏡 Terima kasih karena telah membuat rumah
+                terasa penuh kehangatan.
+            </div>
+
+            <div class="gratitude-note">
+                🌻 Terima kasih sudah bersabar saat aku
+                masih banyak belajar.
+            </div>
+
+            <div class="gratitude-note">
+                ❤️ Terima kasih, Bunda. Abang sayang Bunda,
+                hari ini dan seterusnya.
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<footer>
+    <p>🌷 Dibuat dengan cinta untuk Bunda tersayang 🌷</p>
+    <p>Semoga hari Bunda selalu dipenuhi kebahagiaan. ❤️</p>
+    <p id="dateDisplay"></p>
+</footer>
+
+</div>
+
+
+<!-- NOTIFIKASI -->
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+
+<script>
+/* =================================
+   1. PENGATURAN NAMA DAN LOGIN
+================================= */
+
+/*
+   GANTI "ilham" DENGAN NAMA ANAK YANG DIINGINKAN.
+   Nama tidak membedakan huruf besar dan kecil.
+*/
+
+const correctName = "dzakiyy";
+
+const loginPage = document.getElementById("loginPage");
+const mainWebsite = document.getElementById("mainWebsite");
+const loginForm = document.getElementById("loginForm");
+const passwordInput = document.getElementById("passwordInput");
+const loginError = document.getElementById("loginError");
+
+let childName = "";
+
+loginForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const enteredName = passwordInput.value.trim();
+
+    if (
+        enteredName.toLocaleLowerCase("id-ID") ===
+        correctName.toLocaleLowerCase("id-ID")
+    ) {
+
+        childName = enteredName;
+
+        loginPage.classList.add("hidden");
+        mainWebsite.classList.remove("hidden");
+
+        document.getElementById("childSignature").textContent =
+            childName + ", anakmu tersayang ❤️";
+
+        document.getElementById("customSender").value = childName;
+
+        showToast("Selamat datang! Surat untuk Ibu terbuka 💗");
+
+        startFallingAnimation();
+
+        document.getElementById("dateDisplay").textContent =
+            new Date().toLocaleDateString("id-ID", {
+                weekday: "long",
+                day: "numeric",
+                month: "long",
+                year: "numeric"
+            });
+
+        window.scrollTo(0, 0);
+
+    } else {
+
+        loginError.textContent =
+            "Nama belum cocok. Coba periksa kembali, ya! 🌷";
+
+        passwordInput.value = "";
+        passwordInput.focus();
+
+    }
+
+});
+
+
+/* =================================
+   2. NOTIFIKASI
+================================= */
+
+let toastTimer;
+
+function showToast(message) {
+
+    const toast = document.getElementById("toast");
+
+    toast.textContent = message;
+    toast.classList.add("show");
+
+    clearTimeout(toastTimer);
+
+    toastTimer = setTimeout(function() {
+        toast.classList.remove("show");
+    }, 2800);
+
+}
+
+
+/* =================================
+   3. ANIMASI HATI DAN BUNGA
+================================= */
+
+let animationTimer = null;
+
+function createFloatingElement() {
+
+    if (document.hidden) return;
+
+    const element = document.createElement("div");
+
+    const decorations = ["💗", "🌸", "💕", "🌷", "✨"];
+
+    element.className = "floating";
+
+    element.textContent =
+        decorations[Math.floor(Math.random() * decorations.length)];
+
+    element.style.left = Math.random() * 100 + "vw";
+    element.style.fontSize = (16 + Math.random() * 18) + "px";
+    element.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(element);
+
+    setTimeout(function() {
+        element.remove();
+    }, 10500);
+
+}
+
+function startFallingAnimation() {
+
+    if (animationTimer) return;
+
+    animationTimer = setInterval(createFloatingElement, 700);
+
+}
+
+
+/* =================================
+   4. MODE MALAM
+================================= */
+
+const themeButton = document.getElementById("themeButton");
+
+themeButton.addEventListener("click", function() {
+
+    document.body.classList.toggle("dark");
+
+    const isDark = document.body.classList.contains("dark");
+
+    themeButton.textContent = isDark ? "☀️" : "🌙";
+
+    showToast(
+        isDark
+            ? "Mode malam diaktifkan 🌙"
+            : "Mode terang diaktifkan ☀️"
+    );
+
+});
+
+
+/* =================================
+   5. SEMBUNYIKAN DAN TAMPILKAN SURAT
+================================= */
+
+const letterPaper = document.getElementById("letterPaper");
+const letterToggle = document.getElementById("letterToggle");
+
+letterToggle.addEventListener("click", function() {
+
+    const hidden = letterPaper.classList.toggle("hidden");
+
+    letterToggle.textContent = hidden
+        ? "💌 Tampilkan Surat"
+        : "💗 Sembunyikan Surat";
+
+});
+
+
+/* =================================
+   6. CETAK SURAT
+================================= */
+
+document.getElementById("printButton").addEventListener(
+    "click",
+    function() {
+
+        if (letterPaper.classList.contains("hidden")) {
+            letterPaper.classList.remove("hidden");
+            letterToggle.textContent = "💗 Sembunyikan Surat";
+        }
+
+        window.print();
+
+    }
+);
+
+
+/* =================================
+   7. PELUK VIRTUAL
+================================= */
+
+document.getElementById("hugButton").addEventListener(
+    "click",
+    function() {
+
+        showToast("Peluk hangat untuk Bunda! 🤗❤️");
+
+        createCelebration(25);
+
+    }
+);
+
+
+/* =================================
+   8. KIRIM CINTA
+================================= */
+
+document.getElementById("loveButton").addEventListener(
+    "click",
+    function() {
+
+        showToast("Satu doa dan sejuta cinta untuk Ibu! ❤️");
+
+        createCelebration(20);
+
+    }
+);
+
+
+/* =================================
+   9. PESAN HARI INI
+================================= */
+
+const dailyMessages = [
+    "bunda, jangan lupa meluangkan waktu untuk beristirahat. 🌷",
+    "Terima kasih karena sudah menjadi bagian berharga hidupku. 💗",
+    "Semoga hari bunda dipenuhi kabar baik dan senyuman. ☀️",
+    "bunda juga pantas mendapatkan perhatian dan kebahagiaan. 🌸",
+    "Semoga selalu ada alasan kecil untuk membuat bunda tersenyum. ❤️",
+    "Aku mungkin belum sempurna, tetapi aku selalu bisa belajar menyayangi Ibu dengan lebih baik. 💌"
+];
+
+document.getElementById("dailyButton").addEventListener(
+    "click",
+    function() {
+
+        const message = randomItem(dailyMessages);
+
+        showToast(message);
+
+    }
+);
+
+
+/* =================================
+   10. TOPLES PESAN
+================================= */
+
+const jarMessages = [
+    "Bunda adalah salah satu hadiah paling berharga dalam hidupku. ❤️",
+    "Terima kasih sudah menyayangiku dengan caramu sendiri. 🌷",
+    "Semoga bunda selalu sehat dan punya banyak alasan untuk tersenyum. 💗",
+    "Aku bangga menjadi anak bunda. 🌻",
+    "Semoga setiap kebaikan bunda, kembali dalam bentuk kebahagiaan. ✨",
+    "Peluk hangat untuk bunda, kapan pun bunda membutuhkannya. 🤗",
+    "Aku akan terus belajar menjadi anak yang lebih baik. 💌",
+    "Terima kasih untuk setiap doa dan perhatian Bunda. 🌸",
+    "Bunda tidak harus selalu kuat. Bunda juga layak mendapatkan waktu untuk diri sendiri. 💗",
+    "Hal sederhana bersama Bunda bisa menjadi kenangan yang luar biasa. 🏡"
+];
+
+document.getElementById("jarButton").addEventListener(
+    "click",
+    function() {
+
+        document.getElementById("jarMessage").textContent =
+            randomItem(jarMessages);
+
+        createCelebration(8);
+
+    }
+);
+
+
+/* =================================
+   11. MISI KEBAIKAN
+================================= */
+
+const missionChecks =
+    document.querySelectorAll(".missionCheck");
+
+function updateMissionProgress() {
+
+    let completed = 0;
+
+    missionChecks.forEach(function(check) {
+
+        if (check.checked) {
+            completed++;
+        }
+
+    });
+
+    const percentage =
+        (completed / missionChecks.length) * 100;
+
+    document.getElementById("progressBar").style.width =
+        percentage + "%";
+
+    document.getElementById("progressText").textContent =
+        completed + " dari " + missionChecks.length +
+        " misi selesai " +
+        (completed === missionChecks.length ? "🌟 Hebat sekali!" : "🌱");
+
+    if (completed === missionChecks.length) {
+        showToast("Semua misi selesai! Terus sebarkan kebaikan ❤️");
+        createCelebration(25);
+    }
+
+}
+
+missionChecks.forEach(function(check) {
+
+    check.addEventListener("change", updateMissionProgress);
+
+});
+
+
+/* =================================
+   12. BUAT PESAN PRIBADI
+================================= */
+
+let generatedMessage = "";
+
+document.getElementById("createMessage").addEventListener(
+    "click",
+    function() {
+
+        const message =
+            document.getElementById("customMessage").value.trim();
+
+        const sender =
+            document.getElementById("customSender").value.trim();
+
+        if (!message) {
+            showToast("Tulis pesan untuk anak tersayang terlebih dahulu, ya! 💌");
+            return;
+        }
+
+        generatedMessage =
+            "Untuk Anakku tersayang ❤️\n\n" +
+            message +
+            "\n\nDengan penuh cinta,\n" +
+            (sender || "Anakmu tersayang");
+
+        document.getElementById("messageOutput").textContent =
+            generatedMessage;
+
+        showToast("Pesan spesial berhasil dibuat! 🌷");
+
+    }
+);
+
+
+/* =================================
+   13. SALIN PESAN
+================================= */
+
+document.getElementById("copyMessage").addEventListener(
+    "click",
+    async function() {
+
+        if (!generatedMessage) {
+            showToast("Buat pesan terlebih dahulu, ya! 💌");
+            return;
+        }
+
+        try {
+
+            await navigator.clipboard.writeText(generatedMessage);
+
+            showToast("Pesan berhasil disalin! 📋");
+
+        } catch (error) {
+
+            const temporaryArea = document.createElement("textarea");
+
+            temporaryArea.value = generatedMessage;
+
+            document.body.appendChild(temporaryArea);
+
+            temporaryArea.select();
+
+            const success = document.execCommand("copy");
+
+            temporaryArea.remove();
+
+            showToast(
+                success
+                    ? "Pesan berhasil disalin! 📋"
+                    : "Salin pesan secara manual, ya."
+            );
+
+        }
+
+    }
+);
+
+
+/* =================================
+   14. KOTAK KEJUTAN
+================================= */
+
+const surprises = [
+    "🎁 Kejutan pertama: satu pelukan hangat untuk Bunda!",
+    "🌷 Kejutan kedua: semoga hari ini Bunda mendapatkan kabar baik.",
+    "💗 Kejutan ketiga: terima kasih sudah menjadi Bunda yang berharga.",
+    "🌻 Kejutan keempat: mari lakukan satu kebaikan untuk Bunda hari ini.",
+    "❤️ Kejutan kelima: aku sayang Bunda, lebih dari yang bisa kuungkapkan."
+];
+
+function openSurprise() {
+
+    const result = document.getElementById("surpriseResult");
+
+    result.textContent = randomItem(surprises);
+
+    createCelebration(30);
+
+    showToast("Kejutan terbuka! 🎉");
+
+}
+
+document.getElementById("giftButton").addEventListener(
+    "click",
+    openSurprise
+);
+
+
+/* =================================
+   15. PEMUTAR MUSIK
+================================= */
+
+const musicPlayer = document.getElementById("musicPlayer");
+const musicButton = document.getElementById("musicButton");
+const musicStatus = document.getElementById("musicStatus");
+
+musicButton.addEventListener("click", async function() {
+
+    if (musicPlayer.paused) {
+
+        try {
+
+            await musicPlayer.play();
+
+            musicButton.textContent = "⏸️ Jeda Musik";
+            musicStatus.textContent = "Musik sedang diputar 🎵";
+
+        } catch (error) {
+
+            musicStatus.textContent =
+                "File musik.mp3 belum tersedia atau tidak bisa diputar.";
+
+            showToast("Periksa file musik.mp3 di folder website.");
+
+        }
+
+    } else {
+
+        musicPlayer.pause();
+
+        musicButton.textContent = "▶️ Putar Musik";
+        musicStatus.textContent = "Musik dijeda.";
+
+    }
+
+});
+
+musicPlayer.addEventListener("ended", function() {
+
+    musicButton.textContent = "▶️ Putar Musik";
+    musicStatus.textContent = "Musik selesai diputar.";
+
+});
+
+
+/* =================================
+   16. ANIMASI KEJUTAN
+================================= */
+
+function createCelebration(amount) {
+
+    const decorations = ["💗", "💖", "🌸", "✨", "🌷"];
+
+    for (let i = 0; i < amount; i++) {
+
+        const item = document.createElement("span");
+
+        item.className = "celebration";
+
+        item.textContent =
+            randomItem(decorations);
+
+        item.style.left = "50%";
+        item.style.top = "50%";
+
+        item.style.setProperty(
+            "--x",
+            (Math.random() * 500 - 250) + "px"
+        );
+
+        item.style.setProperty(
+            "--y",
+            (Math.random() * 500 - 250) + "px"
+        );
+
+        item.style.fontSize =
+            (15 + Math.random() * 25) + "px";
+
+        document.body.appendChild(item);
+
+        setTimeout(function() {
+            item.remove();
+        }, 1600);
+
+    }
+
+}
+
+
+/* =================================
+   17. FUNGSI ACAK
+================================= */
+
+function randomItem(items) {
+
+    const index = Math.floor(Math.random() * items.length);
+
+    return items[index];
+
+}
+
+</script>
+
+</body>
+</html>
